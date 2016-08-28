@@ -1,0 +1,457 @@
+TOSX
+v6
+r1
+cCheck dependencies
+cCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX normal x86_64
+cCpHeader config.h DerivedData/Build/Products/Debug/config.h
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005130312F00000000000000AA
+t1362112815
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c0000000052823E3D00000000000000AA
+t1384267325
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000526717DA000000000000044C
+t1382488026
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000526717DA00000000000001DB
+t1382488026
+s475
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+c00000000526717DF000000000000681C
+t1382488031
+s26652
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+c00000000526717DF0000000000004734
+t1382488031
+s18228
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+c00000000526717DF000000000000FC6C
+t1382488031
+s64620
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+c00000000526717DF000000000000F6A0
+t1382488031
+s63136
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+c00000000526717DF0000000000006254
+t1382488031
+s25172
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+c00000000526717DF000000000000E0F8
+t1382488031
+s57592
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+c00000000526717DF000000000000D6DC
+t1382488031
+s55004
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+c00000000526717DF0000000000006308
+t1382488031
+s25352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+c00000000526717DF0000000000004050
+t1382488031
+s16464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+c00000000526717DF0000000000008570
+t1382488031
+s34160
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+c00000000526717DF0000000000005EA0
+t1382488031
+s24224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+c00000000526717DF0000000000005FAC
+t1382488031
+s24492
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+c00000000526717DF0000000000004440
+t1382488031
+s17472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+c00000000526717DF000000000000AA28
+t1382488031
+s43560
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+c00000000526717DF0000000000003E2C
+t1382488031
+s15916
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+c00000000526717DF0000000000030A24
+t1382488031
+s199204
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+c00000000526717DF0000000000005E54
+t1382488031
+s24148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+c00000000526717DF0000000000006A90
+t1382488031
+s27280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+c00000000526717DF00000000000178AC
+t1382488031
+s96428
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+c00000000526717DF000000000001ADC8
+t1382488031
+s110024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+c00000000526717DF000000000001028C
+t1382488031
+s66188
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+c00000000526717DF0000000000008800
+t1382488031
+s34816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+c00000000526717DF0000000000011090
+t1382488031
+s69776
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+c00000000526717DF000000000000882C
+t1382488031
+s34860
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+c00000000526717DF00000000000067AC
+t1382488031
+s26540
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+c00000000526717DF0000000000008DEC
+t1382488031
+s36332
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+c00000000526717DF0000000000004C08
+t1382488031
+s19464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+c00000000526717DF00000000000023C0
+t1382488031
+s9152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+c00000000526717DF000000000000439C
+t1382488031
+s17308
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+c00000000526717DF0000000000006768
+t1382488031
+s26472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+c00000000526717DF00000000000172F4
+t1382488031
+s94964
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+c00000000526717E40000000000001750
+t1382488036
+s5968
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c
+c0000000052339D780000000000015A86
+t1379114360
+s88710
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c
+c0000000052339D240000000000007B74
+t1379114276
+s31604
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/OSX.LinkFileList
+c0000000052339D7C0000000000000242
+t1379114364
+s578
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o
+t1384483380
+s86336
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o
+t1382670369
+s52360
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o
+t1382650837
+s16180
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o
+t1382670108
+s11412
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX
+t1384483380
+s91848
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/config.h
+t1379114364
+s3768
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h
+c00000000522BDAAF0000000000000EB8
+t1378605743
+s3768
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c
+c000000005224F1A400000000000020C3
+t1378152868
+s8387
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.h
+c000000005224F1830000000000000C14
+t1378152835
+s3092
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c
+c0000000052229D510000000000000B75
+t1378000209
+s2933
+i"../core/bagasmi.h"
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c
+c0000000052858A2D0000000000015B5F
+t1384483373
+s88927
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h
+c000000005269DE21000000000000463B
+t1382669857
+s17979
+
+N/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c
+c000000005269E01C0000000000007C18
+t1382670364
+s31768
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c
+r0
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c
+r0
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c
+r0
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c
+r0
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c
+r0
+
+CBuild AST from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies74099fff8649b841^cb0fa4ff8649b841^---0#1#1#--18"Check dependencies36"6FB65AC8-1D92-4D7B-8DEE-4D8CBCDFDE7A-
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s400807164.256355
+e400807164.362090
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c6bb741fcd4e3b741^26df5cfcd4e3b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c0000000000000000^3023"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o ../core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC "-DCONFIG_FILE=<config.h>" -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o36"CFA96819-677D-4067-9478-8ACDB64EADE2-
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s406176180.539349
+e406176180.841389
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c224"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler39468ab4c135b841^4166d7b4c135b841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c0000000000000000^2938"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC -DCONFIG_FILE=<config.h> -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o36"28E5D7DF-0D9E-4CF8-BE23-F17E58573AE6-
+bB740DED8-9C14-47B3-9ECC-9A602163E598
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s400807164.256729
+e400807164.339870
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c:30:
+o/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.h:554:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]
+ostatic ASMGlobal ASM_Globals;
+o                 ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c95d441fcd4e3b741^9b0057fcd4e3b741^-309"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c:30:/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.h:554:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]static ASMGlobal ASM_Globals;                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@29"Unused variable 'ASM_Globals'-400807164#18446744073709551615#0#1(2@98"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c:30:-400807164#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file://localhost/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c0000000000000000^29#9#29#9#1375#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@81"file://localhost/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h0000000000000000^553#17#553#17#13471#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@88"file://localhost/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c0000000000000000^3023"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o ../core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC "-DCONFIG_FILE=<config.h>" -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/execops.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o36"0CBED979-6E18-4CED-A3DE-BC74D42C7B06-
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s404363169.694245
+e404363169.742728
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.h
+oIn file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c:30:
+o/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h:561:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]
+ostatic ASMGlobal ASM_Globals;
+o                 ^
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c224"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler9acfb1a1171ab841^4f22bea1171ab841^-295"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c:30:/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h:561:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]static ASMGlobal ASM_Globals;                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@29"Unused variable 'ASM_Globals'-404363169#18446744073709551615#0#1(2@91"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c:30:-404363169#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@72"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c0000000000000000^29#9#29#9#1375#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@72"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h0000000000000000^560#17#560#17#13609#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@72"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c0000000000000000^2938"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC -DCONFIG_FILE=<config.h> -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/execops.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o36"5CC2178D-1D5F-4F52-8BC5-B0A0779529DD-
+bFB8D3B43-A55F-40EC-BC78-71D2EEB94B74
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s404343636.999768
+e404343637.139764
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c175"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o libs/filepath.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilercc070055cb19b841^6dc82355cb19b841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c0000000000000000^2897"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o libs/filepath.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC -DCONFIG_FILE=<config.h> -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o36"880D1AE4-7034-4E59-84A9-0316FBFBEE74-
+bE0181E92-FE7B-4B31-8FE8-363AD4FF70A1
+
+CCompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s404362908.738875
+e404362908.787720
+r1
+xCompileC
+xDerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/libs/filepath.h
+oIn file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c:30:
+o/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.h:561:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]
+ostatic ASMGlobal ASM_Globals;
+o                 ^
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c162"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerc559bd9c161ab841^caa5c99c161ab841^-298"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c:30:/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/../core/bagasmi.h:561:18: warning: unused variable 'ASM_Globals' [-Wunused-variable]static ASMGlobal ASM_Globals;                 ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@29"Unused variable 'ASM_Globals'-404362908#18446744073709551615#0#1(2@87"In file included from /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c:30:-404362908#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@68"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c0000000000000000^29#9#29#9#1404#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@72"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/core/bagasmi.h0000000000000000^560#17#560#17#13609#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@68"file:///Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c0000000000000000^2863"CompileC DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-generated-files.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-own-target-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-all-target-headers.hmap -iquote /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/OSX-project-headers.hmap -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources/x86_64 -I/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/DerivedSources -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -DPLATFORM_PC -DCONFIG_FILE=<config.h> -MMD -MT dependencies -MF /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.dia -c /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/main.c -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o36"E822504F-22AF-4C2C-ABC7-15D8D112DCE5-
+bCCDF4056-EE95-472C-A989-381023057322
+
+CCpHeader config.h DerivedData/Build/Products/Debug/config.h
+s400807164.402975
+e400807164.405503
+r1
+xCpHeader
+xconfig.h
+xDerivedData/Build/Products/Debug/config.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy DerivedData/Build/Products/Debug/config.h293d67fcd4e3b741^c0d067fcd4e3b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/config.h000000000080d041^386"CpHeader config.h DerivedData/Build/Products/Debug/config.h    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/config.h /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug36"7CC1D243-83C8-4B10-932B-AE8DD864150E-
+
+CLd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX normal x86_64
+s406176180.845172
+e406176180.919115
+r1
+xLd
+x/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX
+xnormal
+xx86_64
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/OSX.LinkFileList
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/main.o
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/bagasmi.o
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/execops.o
+d/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/filepath.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Link /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX53"Ld DerivedData/Build/Products/Debug/OSX normal x86_64056bd8b4c135b841^919bedb4c135b841^---0#0#1#--1033"Ld DerivedData/Build/Products/Debug/OSX normal x86_64    cd /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -F/Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug -filelist /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/OSX.LinkFileList -mmacosx-version-min=10.8 -Xlinker -dependency_info -Xlinker /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Intermediates/OSX.build/Debug/OSX.build/Objects-normal/x86_64/OSX_dependency_info.dat -o /Users/Derrick/Documents/DSTwoSDK/Projects/BAGASMI/OSX/DerivedData/Build/Products/Debug/OSX36"132EE657-E65C-4349-9EE5-AB357B887CCB-
+bB740DED8-9C14-47B3-9ECC-9A602163E598
+

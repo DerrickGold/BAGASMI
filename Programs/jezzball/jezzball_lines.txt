@@ -1,0 +1,366 @@
+_start:
+decr 	MAX_VELOCITY
+blankspr	$0, SCREEN_WIDTH, SCREEN_HEIGHT
+set 	$t0, #1
+loopto 		$0, $t0, BALL_COUNT, #1
+ldspr 	$t0, "ball.bmp"
+laary 	$t1, BALL_XVEL, $t0
+randm 	($t1), MAX_VELOCITY
+incr 	($t1)							
+laary	$t2, BALL_XPOS, $t0
+add 	($t2), ($t2), ($t1)
+laary 	$t1, BALL_YVEL, $t0
+randm 	($t1), MAX_VELOCITY
+incr 	($t1)
+laary 	$t2, BALL_YPOS, $t0
+add 	($t2), ($t2), ($t1)
+loopback 	#0
+GameLoop:
+getlcd 		$s1, $0
+gfxmemset 	$s1, 0, #49152 									
+call 	Mouse_SwipeDirection, $0, $0, $0, $0
+call	LineDrawAttempt, $v0, $0, $0, $0
+drwspr 	$s1, SCREEN_WIDTH, SCREEN_HEIGHT, $0
+set 	$s0, #1
+loopto 	#0, $s0, BALL_COUNT, #1
+call 	Ball_ScreenBoundaries, $s0, $0, $0, $0
+call 	Ball_Update, $s0, $0, $0, $0
+laary 	$t0, BALL_XPOS, $s0
+laary 	$t1, BALL_YPOS, $s0
+setsprxy 	$s0, ($t0), ($t1)
+drwspr		$s1, SCREEN_WIDTH, SCREEN_HEIGHT, $s0
+loopback 	#0
+flip 	$0
+vsync
+jump 	GameLoop
+LineDrawAttempt:
+push 	$ra
+ifeq 	LINE_DIR, #0, _updateHorLine
+ifeq 	LINE_DIR, #1, _updateVerLine
+ifgt 	$a0, #-1, _initLine
+pop 	$ra
+jumpr 	$ra
+_initLine:
+set 	LINE_DIR, $a0
+set 	LINE_X1, MOUSE_OLDX
+set 	LINE_X2, MOUSE_OLDX
+set 	LINE_Y1, MOUSE_OLDY
+set 	LINE_Y2, MOUSE_OLDY
+sub 	LINE_Y1, LINE_Y1, #2
+add 	LINE_Y2, LINE_Y2, #2
+sub 	LINE_X1, LINE_X1, #2
+add 	LINE_X2, LINE_X2, #2
+jumpr 	$ra
+_updateHorLine:
+call 	_UpdateLineDrawHor, MOUSE_CURX, MOUSE_CURY, $0, $0
+pop 	$ra
+jumpr 	$ra
+_updateVerLine:
+call 	_UpdateLineDrawVert, MOUSE_CURX, MOUSE_CURY, $0, $0
+pop 	$ra
+jumpr 	$ra
+_UpdateLineDrawHor:
+set 		$t0, #0
+set 		$t1, #0
+getsprgfx 	$t2, BG_SURFACE_SPRITE
+set 		$t4, LINE_X1
+decr 		$t4
+iflte 		$t4, #0, __lineSkipLeft
+gfxgetpix	$t3, $t2, SCREEN_WIDTH, $t4, $a1
+ifeq 		$t3, LINE_COL, __lineSkipLeft
+sub 		LINE_X1, LINE_X1, #2
+jump 		__doRightSide
+__lineSkipLeft:
+set 		$t0, #1
+__doRightSide:
+set 		$t4, LINE_X2
+incr 		$t4
+ifgte 		$t4, #255, __lineSkipRight
+gfxgetpix 	$t3, $t2, SCREEN_WIDTH, $t4, $a1
+ifeq		$t3, LINE_COL, __lineSkipRight
+add 		LINE_X2, LINE_X2, #2
+jump 		_isLineDone
+__lineSkipRight:
+set 		$t1, #1
+jump 		_isLineDone
+_UpdateLineDrawVert:
+set 		$t0, #0
+set 		$t1, #0
+getsprgfx 	$t2, BG_SURFACE_SPRITE
+set 		$t4, LINE_Y1
+decr 		$t4
+iflte 		$t4, #0, __lineSkipTop
+gfxgetpix 	$t3, $t2, SCREEN_WIDTH, $a0, $t4
+ifeq 		$t3, LINE_COL, __lineSkipTop
+sub 		LINE_Y1, LINE_Y1, #2
+jump 		__doBotSide
+__lineSkipTop:
+set 	$t0, #1
+__doBotSide:
+set 		$t4, LINE_Y2
+incr 		$t4
+ifgte 		$t4, SCREEN_HEIGHT, __lineSkipBot
+gfxgetpix	$t3, $t2, SCREEN_WIDTH, $a0, $t4
+ifeq 		$t3, LINE_COL, __lineSkipBot
+add 		LINE_Y2, LINE_Y2, #2
+jump 		_isLineDone
+__lineSkipBot:
+set 	$t1, #1
+_isLineDone:
+and 		$t0, $t0, $t1
+ifeq 		$t0, $0, _DrawLine
+jump 		_lineFillEmpty, #1
+set 		LINE_DIR, #-1
+_DrawLine:
+getsprgfx 		$t0, BG_SURFACE_SPRITE
+ifeq 			$v0, #999, __clearLine
+gfxdrwrec 	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, LINE_COL
+jumpr 	$ra 					
+__clearLine:
+gfxdrwrec 	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, #0
+jumpr 	$ra 					
+_lineFillEmpty:
+ifeq 	LINE_DIR, #0, __lineFillHor
+ifeq 	LINE_DIR, #1, __lineFillVert
+print 	"no axis, wtf\n"
+jmpbk
+__lineFillHor:
+print	"horizontal fill\n"
+set 	$t0, LINE_Y1
+ldaddr 	$t1, BALL_YPOS
+set 	$t6, LINE_X1
+set 	$t7, LINE_X2
+ldaddr	$t8, BALL_XPOS
+jump 	___lineCheckEmpty
+__lineFillVert:
+print	"vertical fill\n"
+set 	$t0, LINE_X1
+ldaddr 	$t1, BALL_XPOS
+set 	$t6, LINE_Y1
+set 	$t7, LINE_Y2
+ldaddr 	$t8, BALL_YPOS
+___lineCheckEmpty:
+set 	$t3, $0
+set 	$t4, $0
+set 	$t2, #1
+loopto 		#1, $t2, BALL_COUNT, #1
+laary 		$t5, ($t8), $t2
+iflte		($t5), $t6, _____linenextLoop
+ifgte 		($t5), $t7, _____linenextLoop
+laary 		$t5, ($t1), $t2
+iflte 		($t5), $t0, ____incrleft
+jump 		____incrRight
+____incrleft:
+print		"incr top/left\n"
+incr 		$t3
+jump 		_____linenextLoop
+____incrRight:
+print 		"incr bot/right\n"
+incr 		$t4
+_____linenextLoop	loopback	#1
+ifeq 	$t3, $0, ___fillLeft
+ifeq 	$t4, $0, ___fillRight
+print 	"no empty sides\n"
+jmpbk
+___fillLeft:
+print 	"filling left/top!\n"
+getsprgfx 		$t0, BG_SURFACE_SPRITE
+ifeq 	LINE_DIR, #0, _____fillTop
+sub 			LINE_X1, LINE_X1, #2
+______widthLoopLeft:
+iflt 			LINE_X1, $0, ______widthLoopLeft0
+gfxgetpix 		$t1, $t0, SCREEN_WIDTH, LINE_X1, $a1
+ifeq 			$t1, LINE_COL, ______widthLoopLeftExit
+sub 			LINE_X1, LINE_X1, #1
+jump  			______widthLoopLeft
+______widthLoopLeft0: set 	LINE_X1, $0
+______widthLoopLeftExit:
+print 		"filling left\n"
+gfxdrwrec	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, LINE_COL
+jmpbk
+_____fillTop:
+sub 			LINE_Y1, LINE_Y1, #2
+______widthLoopTop:
+iflt			LINE_Y1, $0, ______widthLoopTop0
+gfxgetpix 		$t1, $t0, SCREEN_WIDTH, $a0, LINE_Y1
+ifeq 			$t1, LINE_COL, ______widthLoopTopExit
+sub 			LINE_Y1, LINE_Y1, #1
+jump  			______widthLoopTop
+______widthLoopTop0: set 	LINE_Y1, $0
+______widthLoopTopExit:
+gfxdrwrec	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, LINE_COL
+jmpbk
+___fillRight:
+print 	"filling right/bottom!\n"
+getsprgfx 		$t0, BG_SURFACE_SPRITE
+ifeq 	LINE_DIR, #0, _____fillBot
+add 			LINE_X2, LINE_X2, #2
+______widthLoopRight:
+ifgt			LINE_X2, SCREEN_WIDTH, ______widthLoopRight0
+gfxgetpix 		$t1, $t0, SCREEN_WIDTH, LINE_X2, $a1
+ifeq 			$t1, LINE_COL, ______widthLoopRightExit
+add 			LINE_X2, LINE_X2, #1
+jump  			______widthLoopRight
+______widthLoopRight0: set 	LINE_X2, SCREEN_WIDTH
+______widthLoopRightExit:
+gfxdrwrec	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, LINE_COL
+jmpbk
+_____fillBot:
+add 			LINE_Y2, LINE_Y2, #2
+______widthLoopRBot:
+ifgt			LINE_Y2, SCREEN_HEIGHT, ______widthLoopBot0
+gfxgetpix 		$t1, $t0, SCREEN_WIDTH, $a0, LINE_Y2
+ifeq 			$t1, LINE_COL, ______widthLoopBotExit
+add 			LINE_Y2, LINE_Y2, #1
+jump  			______widthLoopRBot
+______widthLoopBot0: set 	LINE_Y2, #191
+______widthLoopBotExit:
+gfxdrwrec	$t0, SCREEN_WIDTH, SCREEN_HEIGHT, LINE_X1, LINE_Y1, LINE_X2, LINE_Y2, LINE_COL
+jmpbk
+Ball_Update:
+laary 		$t0, BALL_XPOS, $a0
+laary 		$t1, BALL_YPOS, $a0
+getsprgfx	$t3, BG_SURFACE_SPRITE
+laary 		$t2, BALL_XVEL, $a0
+set 		$t5, ($t0)
+decr 		$t5
+set 		$t6, BALL_HEIGHT
+shr 		$t6, $t6, #1
+add 		$t6, $t6, ($t1)
+gfxgetpix 	$t4, $t3, SCREEN_WIDTH, $t5, $t6
+ifeq 		$t4, LINE_COL, ____posVelocity, #1
+add 		$t5, $t5, #2
+add 		$t5, $t5, BALL_WIDTH
+gfxgetpix 	$t4, $t3, SCREEN_WIDTH, $t5, $t6
+ifeq 		$t4, LINE_COL, ____negVelocity, #1
+add 	($t0), ($t0), ($t2)
+laary 		$t2, BALL_YVEL, $a0
+set 		$t5, ($t1)
+decr 		$t5
+set 		$t6, BALL_WIDTH
+shr 		$t6, $t6, #1
+add 		$t6, $t6, ($t0)
+gfxgetpix 	$t4, $t3, SCREEN_WIDTH, $t6, $t5
+ifeq 		$t4, LINE_COL, ____posVelocity, #1
+add 		$t5, $t5, BALL_HEIGHT
+gfxgetpix 	$t4, $t3, SCREEN_WIDTH, $t6, $t5
+ifeq 		$t4, LINE_COL, ____negVelocity, #1
+add 	($t1), ($t1), ($t2)
+jumpr 	$ra 						
+____negVelocity:
+abs		$t7, ($t2)
+mul		($t2), $t7, #-1
+jmpbk
+____posVelocity:
+abs 	$t7, ($t2)
+set 	($t2), $t7
+jmpbk
+Ball_ScreenBoundaries:
+push 	$ra 									
+laary	$t0, BALL_XPOS, $a0
+set 	$t1, ($t0) 								
+iflte 	$t1, #0, _checkLeft, #1 				
+add 	$t1, $t1, BALL_WIDTH
+ifgte 	$t1, SCREEN_WIDTH, _checkRight, #1 		
+laary	$t0, BALL_YPOS, $a0
+set 	$t1, ($t0)
+iflte 	$t1, #0, _checkTop, #1 				
+add 	$t1, $t1, BALL_HEIGHT
+ifgte 	$t1, SCREEN_HEIGHT, _checkBot, #1 	
+pop 	$ra
+jumpr 	$ra
+_checkRight:
+set 	($t0), SCREEN_WIDTH
+decr 	($t0) 						
+sub		($t0), ($t0), BALL_WIDTH
+jump 	___xflip
+_checkLeft:
+set 	($t0), $0
+incr 	($t0)						
+___xflip:
+laary 	$t2, BALL_XVEL, $a0
+jump _flipVel
+_checkBot:
+set 	($t0), SCREEN_HEIGHT
+decr 	($t0)
+sub 	($t0), ($t0), BALL_HEIGHT
+jump 	___yflip
+_checkTop:
+set 	($t0), $0
+incr 	($t0)
+___yflip:	laary 	$t2, BALL_YVEL, $a0
+_flipVel:
+mul 	($t2), ($t2), #-1
+jmpbk
+Mouse_SwipeDirection:
+set 	$v0, #-1 								
+getkey 	$t0
+chkkeynew 	$t0, INPUT_SCREEN, _storeOldMouse, #1
+chkkeyold 	$t0, INPUT_SCREEN, _getSwipeDir, #1
+chkkey 		$t0, INPUT_SCREEN, __updateMouse, #1
+jumpr	$ra 									
+__updateMouse:
+set 		MOUSE_CURX, $PENX
+set 		MOUSE_CURY, $PENY
+jmpbk
+_getSwipeDir:
+and 	$t0, MOUSE_OLDX, #1
+ifgt 	$t0, $0, __mouse_evenx, #1
+and 	$t0, MOUSE_OLDY, #1
+ifgt 	$t0, $0, __mouse_eveny
+jump 	__calcSwipDir
+__mouse_evenx:
+print 	"even x\n"
+sub 	MOUSE_OLDX, MOUSE_OLDX, #1
+jmpbk
+__mouse_eveny:
+print 	"even y\n"
+sub 	MOUSE_OLDY, MOUSE_OLDY, #1
+__calcSwipDir:
+print 	"New Mouse: "
+out 	MOUSE_CURX
+outc 	<,
+out 	MOUSE_CURY
+outc 	'10
+sub 	$t0, MOUSE_CURX, MOUSE_OLDX
+abs		$t0, $t0
+sub 	$t1, MOUSE_CURY, MOUSE_OLDY
+abs 	$t1, $t1
+ifgt 	$t0, $t1, _returnXAxis
+set 	$v0, #1 								
+jmpbk
+_returnXAxis:
+set 	$v0, #0 								
+_storeOldMouse:
+store 	$PENX, MOUSE_OLDX
+store 	$PENY, MOUSE_OLDY
+print 	"Old Mouse: "
+out 	MOUSE_OLDX
+outc 	<,
+out 	MOUSE_OLDY
+outc 	'10
+jmpbk
+ENDPRG: 	halt
+SCREEN_WIDTH 	data 	#256
+SCREEN_HEIGHT 	data 	#192
+MAX_VELOCITY 	data	#5			
+BALL_COUNT 		data 	#3
+BALL_XVEL 		array   #10
+BALL_YVEL 		array 	#10
+BALL_XPOS 		array 	#10 	{0,0,0,0,0,0,0,0,0,0}
+BALL_YPOS 		array 	#10 	{0,0,0,0,0,0,0,0,0,0}
+BALL_WIDTH 		data 	#8
+BALL_HEIGHT 	data 	#8
+MOUSE_OLDX 		data 	#0
+MOUSE_OLDY 		data 	#0
+MOUSE_CURX 		data 	#0
+MOUSE_CURY 		data 	#0
+LINE_X1 		data 	#0
+LINE_Y1 		data 	#0
+LINE_X2 		data 	#0
+LINE_Y2 		data 	#0
+LINE_DIR 		data 	#-1
+LINE_COL		data 	#0x8f00 					
+BG_SURFACE_SPRITE 	data 	#0
+INPUT_SCREEN 	data 	#4096
+HALT

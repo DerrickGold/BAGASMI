@@ -1,0 +1,58 @@
+JUMP loadGfx, #1
+mainLoop JUMP updateTime, #1
+GETKEY $R15
+SET clockX, $PENX
+SET clockY, $PENY
+JUMP drawGFX, #1
+JUMP mainLoop
+HALT
+drawGFX SETSCRNCOL clockScreen, #65535
+JUMP updateSprites, #1
+SUB $R0, clockX, #3
+SUB $R1, clockY, #3
+SETSPRXY #5, $R0, $R1
+DRWSPR clockScreen, #5
+SET $R0, clockX
+SET $R1, #0
+LOOPTO #0, $R1, #5, #1
+SETSPRXY $R1, $R0, clockY
+DRWSPR clockScreen, $R1
+ADD $R0, $R0, #24
+LOOPBACK #0
+FLIP clockScreen
+VSYNC
+JMPBK
+updateSprites NOP
+SPRFRAME #0, #2, hours10
+SPRFRAME #1, #2, hours1
+SPRFRAME #3, #2, minutes10
+SPRFRAME #4, #2, minutes1
+JMPBK
+updateTime GETTIME currentTime
+LDARYC $R15, currentTime, #2
+REM hours1, $R15, #10
+DIV hours10, $R15, #10
+LDARYC $R15, currentTime, #1
+REM minutes1, $R15, #10
+DIV minutes10, $R15, #10
+JMPBK
+loadGfx NOP
+LDSPR #0, "numbers.bmp"
+SPRFRAMEDIM #0, #24, #36
+SETSPRXY #0, clockX, clockY
+CLONESPR #1, #0
+LDSPR #2, "colon.bmp"
+CLONESPR #3, #0
+CLONESPR #4, #0
+LDSPR #5, "bg.bmp"
+SETSPRALPHA #5, #128
+JMPBK
+currentTime ARRAY '7
+clockX DATA #42
+clockY DATA #56
+clockScreen DATA #1
+hours10 DATA #0
+hours1  DATA #0
+minutes10 DATA #0
+minutes1 DATA #0
+HALT

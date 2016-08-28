@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" "./../../Programs/circles.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/derrick/ds2projects/BAGASMI/Binary/PC-Linux/ds2_simulator_linux "./../../Programs/circles.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/derrick/ds2Projects/BAGASMI/Binary/PC-Linux/ds2_simulator_linux "./../../Programs/circles.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/derrick/ds2Projects/BAGASMI/Binary/PC-Linux/ds2_simulator_linux "./../../Programs/ini/iniFile.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/derrick/ds2Projects/BAGASMI/Binary/PC-Linux/ds2_simulator_linux "./../../Programs/Font/font.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/derrick/ds2Projects/BAGASMI/Binary/PC-Linux/ds2_simulator_linux "./../../Programs/clock/clock.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>ds2_simulator_linux "./../../Programs/circles.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>.ds2_simulator_linux "./../../Programs/circles.asm"</runcommandpicklistitem>
+          <runcommandpicklistitem>../../Binary/PC-Linux/ds2_simulator_linux "./../../Programs/circles.asm"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>../../Binary/PC-Linux/ds2_simulator_linux "./../../Programs/circles.asm"</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>1</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

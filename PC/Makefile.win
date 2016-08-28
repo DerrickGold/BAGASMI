@@ -1,0 +1,45 @@
+# Project: BAGASMI
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = build/data.o build/input.o build/video.o build/main.o build/bagasmi.o build/execops.o $(RES)
+LINKOBJ  = build/data.o build/input.o build/video.o build/main.o build/bagasmi.o build/execops.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/Projects/ASMinterpreter-AIO/SDL-1.2.14/lib" -L"Y:/Projects/BAGASMI/PC/src/SDL-1.2.14/lib" -lmingw32 -lSDLmain -lSDL  -msse2 
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/Projects/ASMinterpreter-AIO/SDL-1.2.14/include"  -I"Y:/Projects/BAGASMI/PC/src/SDL-1.2.14/include"  -I"Y:/Projects/BAGASMI/PC/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"Y:/Projects/BAGASMI/PC/src/SDL-1.2.14/include"  -I"Y:/Projects/BAGASMI/PC/include" 
+BIN  = ../Binary/PC-Windows/BAGASMI_PC.exe
+CXXFLAGS = $(CXXINCS)   -fexpensive-optimizations -O3 -msse2
+CFLAGS = $(INCS) -std=gnu99 -DPLATFORM_PC -DCONFIG_FILE="<config.h>"   -fexpensive-optimizations -O3 -msse2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../Binary/PC-Windows/BAGASMI_PC.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "..\Binary\PC-Windows\BAGASMI_PC.exe" $(LIBS)
+
+build/data.o: ../core/data.c
+	$(CC) -c ../core/data.c -o build/data.o $(CFLAGS)
+
+build/input.o: src/input.c
+	$(CC) -c src/input.c -o build/input.o $(CFLAGS)
+
+build/video.o: src/video.c
+	$(CC) -c src/video.c -o build/video.o $(CFLAGS)
+
+build/main.o: src/main.c
+	$(CC) -c src/main.c -o build/main.o $(CFLAGS)
+
+build/bagasmi.o: ../core/bagasmi.c
+	$(CC) -c ../core/bagasmi.c -o build/bagasmi.o $(CFLAGS)
+
+build/execops.o: ../core/execops.c
+	$(CC) -c ../core/execops.c -o build/execops.o $(CFLAGS)

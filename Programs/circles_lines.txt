@@ -1,0 +1,66 @@
+_start:
+set         $PENX, #128
+set         $PENY, #96
+set             $a0, #68
+MainLoop:
+jump           CheckButtons, #1
+set            $a1, $PENX
+set            $a2, $PENY
+jump           DrawCircle, #1
+flip           $0                       
+jump           MainLoop                    
+CheckButtons:
+getkey          $t0
+chkkeynew       $t0, #8
+jmpp            ExitPrgm
+chkkeynew       $t0, #4096
+jmpp            touched
+jump            noTouch
+touched:
+clrscrn         $0
+noTouch:
+jmpbk                                           
+DrawCircle:
+set             $t9, #1                                     
+loopto          #0, $t9, $a0, #1
+randm       $t8, #32768
+add         $t8, $t8, #32767
+sub         $t0, $t9, #1                                
+set         $t1, #1                                     
+mul         $t2, $t9, #-2                               
+set         $t3, $0                                  
+set         $t4, $t9                                    
+loopto          #1, $t3, $t4, #1                        ;for x < y
+iflt        $t0, #0, continueCircle                 
+decr        $t4, #1                                 
+add         $t2, $t2, #2                            
+add         $t0, $t0, $t2                           
+continueCircle:
+add         $t1, $t1, #2                            
+add         $t0, $t0, $t1                           
+add         $t6, $a1, $t3                           
+add         $t7, $a2, $t4                           
+setpixel    $0, $t6, $t7, $t8
+sub         $t6, $a1, $t3                           
+setpixel    $0, $t6, $t7, $t8
+add         $t6, $a1, $t3                           
+sub         $t7, $a2, $t4                           
+setpixel    $0, $t6, $t7, $t8
+sub         $t6, $a1, $t3                           
+setpixel    $0, $t6, $t7, $t8
+add         $t6, $a1, $t4                           
+add         $t7, $a2, $t3                           
+setpixel    $0, $t6, $t7, $t8
+sub         $t6, $a1, $t4                           
+setpixel    $0, $t6, $t7, $t8
+add         $t6, $a1, $t4                           
+sub         $t7, $a2, $t3                           
+setpixel    $0, $t6, $t7, $t8
+sub         $t6, $a1, $t4                           
+setpixel    $0, $t6, $t7, $t8
+loopback        #1
+loopback        $0                       
+jmpbk                                       
+ExitPrgm:
+halt
+HALT

@@ -1,0 +1,66 @@
+BAGASMI RC5
+-new name!
+
+BAGASM RC4
+[General Changes]
+-optimized const storages in ram. All same values share one location instead of each creating their own instance in memory
+-added ways for accessing the main ram
+-can access arrays like TESTARAY[CONST NUMBER], where const number can not be determined by a variable
+    e.g. SET TESTARAY[5],#12
+        sets the 5th position in TESTARAY to the value of 12
+-project compiled for debian now 
+
+[NDS]
+-fixed waitExit() function to actually exit program
+[PC]
+-no longer uses slow ATOI for reading addresses
+
+BAGASM RC3
+[General Changes]
+
+-started NDS port
+-misc changes for performance improvements
+-can now configure the max number of arguments per function
+-minor arg parsing optimizations on code conversion
+-added a system for deprecating functions and registers
+    SETPIX, $VX(0 or 1), and $VY(0 or 1) are now deprecated!
+-added support for arrays(check documenation)
+-updated and optimized code in the benchmark program
+-added SETPIXEL screen,x,y,color
+-fixed the JMPBK command skipping a line
+-optimized the pong demo (removed NOP instances)
+-added SETPIXELF - a faster, but unsafe version of SETPIXEL
+-cpu operations can now be added in any order in the ops enum
+-added FATOPEN SLOT,FILENAME -filename can be an array of characters or a constant
+-added FATREAD SLOT,DEST,SIZE,COUNT
+-added FATCLOSE SLOT
+-added FATSEEK SLOT,POS,OFFSET
+    (slots are 0 or 1)
+-Constant strings ("this kind of test") are now stored in virtual ram
+
+[DS2 fixes]
+-fixed CLRSCRN
+-fixed stylus x and y detection
+
+[PC fixes]
+-added stylus support using mouse
+
+
+System benchmarks:
+DS @ 66mhz = 1.237-1.238 seconds(confirmed by Snailface on hardware)
+DSi @ 133mhz = 0.620 seconds
+DS2 @ 396mhz = 0.192 seconds
+PC = no point in measuring
+
+
+BAGASM RC2
+-added JMPBK function. This will jump back to the line after a previous jump, requires no arguments
+-removed $VMX define for video memory access and added SETPIX screen,color. This results in better video access performance
+-constant values and jumps are now stored in the virtual ram (4kb) to improve read performance
+-new memory access routines for better performance
+-pc interpreter will now count the number of operations executed within a programs run time
+-added white space handling to code parsing, can now use tabs or spaces to indent lines, and new lines to organize code. Functions still must follow "FUNC ARG1,ARG2" format (white space sensitive)
+-vastly improved general performance (test program took ~1.5 seconds to complete in RC1, now it takes ~0.36 seconds to complete)
+-moved some data off stack declarations to dynamic allocations for better memory handling and reduced errors for portable environments. 
+-white space doesn't matter before and after lines
+

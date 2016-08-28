@@ -1,0 +1,111 @@
+_start:
+print 			"Press Start/Enter to quit,\n"
+print 			"And A/Z to launch ball.\n"
+set 			$t0, #1
+ldbg 			$0, "zelda-map"
+set 			$BGX0, #128
+set 			$BGY0, #96
+ldspr 			$0, "paddle.bmp"				
+ldspr 			#1, "ball.bmp"					
+ldspr 			#2, "paddle.bmp"				
+jump 			DrawScreen, #1 					
+GameLoop:
+ifeq 			$t1, $0, RallyStart, #1				
+getkey 			$s0
+chkkey 			$s0, #128, MovePlayerDown, #1
+chkkey 			$s0, #64, MovePlayerUp, #1
+add				$BGX0, $BGX0, $t2
+add				$BGY0, $BGY0, $t3
+add 			BALL_X, BALL_X, $t2 			
+jump 			DrawScreen, #1 					
+add 			BALL_Y, BALL_Y, $t3 			
+jump 			BallScreenCol, #1 				
+jump 			PaddleCol, #1					
+jump 			AICODE, #1
+jump 			GameLoop
+DrawScreen:
+getlcd			$s1, $0
+drwbg 			$s1, $0
+setsprxy 		$0, P1_X, P1_Y
+drwspr 			$s1, #256, #192, $0
+setsprxy 		#1, BALL_X, BALL_Y
+drwspr 			$s1, #256, #192,  #1
+setsprxy 		#2, P2_X, P2_Y
+drwspr	 		$s1, #256, #192, #2
+flip 			$0
+vsync
+jmpbk								
+RallyStart:
+getkey 			$s0
+chkkey 			$s0, #1, startBall
+jump 			RallyStart
+startBall:
+set 			$t1, #1
+randm 			$t2, #4
+add 			$t2, $t2, #1
+mul 			$t2, $t2, $t0
+nonZeroLoop:
+randm 			$t3, #8
+sub 			$t3, $t3, #4
+ifeq			$t3, $0, nonZeroLoop
+jmpbk										
+MovePlayerDown:
+ifgt 			P1_Y, #160, downDone 		
+add 			P1_Y, P1_Y, #3				
+downDone:
+jmpbk										
+MovePlayerUp:
+iflt 			P1_Y, $0, upDone 			
+sub 			P1_Y, P1_Y, #3				
+upDone:
+jmpbk										
+P2Score:
+print 			"Player 2 scores!"
+set 			$t0, #1 					
+outc 			'10 						
+incr 			$t5 						
+jump 			ResetBall
+P1Score:
+print 			"Player 1 scores!"
+set 			$t0, #-1 					
+outc 			'10 						
+incr 			$t4 						
+jump 			ResetBall
+BallScreenCol:
+iflte 			BALL_X, $0, P2Score 				
+ifgte 			BALL_X, #248, P1Score 				
+iflte 			BALL_Y, $0, BallYVelReverse, #1 	
+ifgte 			BALL_Y, #184, BallYVelReverse, #1 	
+jmpbk
+PaddleCol:
+chkcol 			$0, #1
+jmpc 			BallXVelReverse, #1
+chkcol 			#2, #1
+jmpc 			BallXVelReverse, #1
+jmpbk											
+BallXVelReverse:
+set 			$t0, #-1
+mul 			$t2, $t2, $t0 					
+add 			BALL_X, BALL_X, $t2 			
+jmpbk
+BallYVelReverse:
+shl 			$t6, $t3, #1
+sub 			$t3, $t3, $t6
+jmpbk
+AICODE:
+set 			P2_Y, BALL_Y
+jmpbk
+ResetBall:
+set 			$t1, $0							
+set 			BALL_X, #124					
+set 			BALL_Y, #92
+jump 			DrawScreen, #1 					
+jump 			GameLoop 						
+halt
+P1_X:			DATA #8
+P1_Y: 			DATA #80
+P2_X: 			DATA #240
+P2_Y: 			DATA #80
+BALL_X: 		DATA #124
+BALL_Y: 		DATA #92
+HALT

@@ -1,0 +1,46 @@
+# Project: BAGASMI-DS2-Simulator
+# Makefile created by Dev-C++ 5.6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = build/main.o build/input.o build/video.o build/bagasmi.o build/execops.o build/scriptstack.o build/extLibs.o
+LINKOBJ  = build/main.o build/input.o build/video.o build/bagasmi.o build/execops.o build/scriptstack.o build/extLibs.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -L"E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/src" E:/Documents/Programming/DSTwoSDK/libBAG/lib/libbag_windows.a -lmingw32 E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/windows/SDL-1.2.14/lib/libSDLmain.a E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/windows/SDL-1.2.14/lib/libSDL.dll.a -m32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/windows/SDL-1.2.14/include" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/include" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrc/include" -I"E:/Documents/Programming/DSTwoSDK/Projects/BAGASMI/DS2/DS2_Simulator_Windows/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/windows/SDL-1.2.14/include" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrcPC/include" -I"E:/Documents/Programming/DSTwoSDK/libBAG/libsrc/include" -I"E:/Documents/Programming/DSTwoSDK/Projects/BAGASMI/DS2/DS2_Simulator_Windows/include"
+BIN      = ../../Binary/PC-Windows/DS2_Simulator_windows.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3 -std=gnu99 -DUSE_SDL -DPLATFORM_DS2 -DCONFIG_FILE="<config.h>"
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+build/main.o: src/main.c
+	$(CC) -c src/main.c -o build/main.o $(CFLAGS)
+
+build/input.o: ../src/input.c
+	$(CC) -c ../src/input.c -o build/input.o $(CFLAGS)
+
+build/video.o: ../src/video.c
+	$(CC) -c ../src/video.c -o build/video.o $(CFLAGS)
+
+build/bagasmi.o: ../../core/bagasmi.c
+	$(CC) -c ../../core/bagasmi.c -o build/bagasmi.o $(CFLAGS)
+
+build/execops.o: ../../core/execops.c
+	$(CC) -c ../../core/execops.c -o build/execops.o $(CFLAGS)
+
+build/scriptstack.o: ../../core/scriptstack.c
+	$(CC) -c ../../core/scriptstack.c -o build/scriptstack.o $(CFLAGS)
+
+build/extLibs.o: ../src/extLibs.c
+	$(CC) -c ../src/extLibs.c -o build/extLibs.o $(CFLAGS)
