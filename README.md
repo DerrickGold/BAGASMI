@@ -2,8 +2,7 @@
 
 Current Working Version: R7
 
-
-    BAGASMI is a portable interpreter for an assembly like scripting language in which
+BAGASMI is a portable interpreter for an assembly like scripting language in which
 one can bind their own functions to. The interpreter is written completely in C originally
 for the Supercard DSTwo flashcard for the Nintendo DS. The Supercard DSTwo is a flashcard
 which features its own onboard processor (120 to 396 mhz) and ram (32 megabytes).
