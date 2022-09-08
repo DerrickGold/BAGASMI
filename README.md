@@ -1,4 +1,6 @@
-#BAGASMI
+# BAGASMI
+
+
 
 Current Working Version: R7
 
@@ -7,12 +9,12 @@ one can bind their own functions to. The interpreter is written completely in C 
 for the Supercard DSTwo flashcard for the Nintendo DS. The Supercard DSTwo is a flashcard
 which features its own onboard processor (120 to 396 mhz) and ram (32 megabytes).
 
+![Alt text](/screenshots/bagasmi.png?raw=true "BAGASMI PC")
+
 For information on using this interpreter, take a look at the wiki!
 
+## Compiling:
 
-==================================================================================
-Compiling:
-==================================================================================
 -Enter the directory for the platform you wish to compile for
 -modify makefile to reflect your system settings (change file locations and what-not)
 -build using make
